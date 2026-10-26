@@ -1,0 +1,250 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--ink-900);
+  padding: 2rem 1.25rem 4rem;
+  font-family: var(--font-sans);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.dashboardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-700);
+  margin-bottom: 0.35rem;
+}
+
+.title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--green-900);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.subtitle {
+  color: var(--ink-500);
+  font-size: 0.92rem;
+}
+
+/* Profile / Farmer Summary Card */
+.farmerSummaryCard {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--neu-flat);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.farmerAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-700), var(--green-500));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(41, 109, 57, 0.35);
+}
+
+.farmerDetails h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 0.2rem;
+}
+
+.farmerDetails p {
+  font-size: 0.85rem;
+  color: var(--ink-500);
+}
+
+.farmerStatsRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.statBadge {
+  background: var(--bg-primary);
+  box-shadow: var(--neu-flat-sm);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.statVal {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--green-800);
+  display: block;
+}
+
+.statLbl {
+  font-size: 0.68rem;
+  color: var(--ink-500);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* AI Assistant Banner */
+.aiBanner {
+  background: linear-gradient(135deg, var(--green-50), var(--bg-surface));
+  border: 1.5px solid rgba(41, 109, 57, 0.2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--neu-flat-sm);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.aiBannerText {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aiBannerIcon {
+  font-size: 2rem;
+}
+
+.aiBannerText h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--green-900);
+  margin-bottom: 0.15rem;
+}
+
+.aiBannerText p {
+  font-size: 0.82rem;
+  color: var(--ink-700);
+}
+
+/* Grid of Dashboard Modules */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.tile {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--neu-flat);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  padding: 1.4rem;
+  cursor: pointer;
+  color: inherit;
+  transition: all var(--transition-normal);
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--neu-flat-lg);
+  border-color: rgba(51, 136, 72, 0.35);
+}
+
+.tileFeatured {
+  background: linear-gradient(145deg, #f0f7ef, var(--bg-primary));
+  border-color: rgba(51, 136, 72, 0.4);
+}
+
+.tileIcon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  box-shadow: var(--neu-flat-sm);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: var(--green-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tileIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.tileBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.tileHeadRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tileLabel {
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--ink-900);
+}
+
+.tileDescription {
+  color: var(--ink-500);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--green-100);
+  color: var(--green-800);
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .farmerSummaryCard {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .aiBanner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
